@@ -1,0 +1,59 @@
+Name: Yifan Chen 
+USC NetId: ychen865
+CSCI 455 PA1
+Fall 2019
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+violate USC's student conduct code.  In particular, the work is my
+own, not a collaboration, and does not involve code created by other
+people, except for the the resources explicitly mentioned in the CS 455
+Course Syllabus.  And I did not share my solution or parts of it with
+other students in the course."
+
+Initial below to "sign" the above statement:
+YC
+
+----------------------------------------------
+ACKNOWLEDGE ANY OUTSIDE SOURCES
+
+List here any code you submitted for this assignment that was written
+with significant help of a course staff member, or code used from the
+textbook.  Be specific about what methods or algorithms are involved,
+and what sections of the textbook are involved (if applicable): [you do
+not need to list any of the code that we wrote for the assignment,
+i.e., the contents of the starter files for the assignment]
+
+
+
+----------------------------------------------
+KNOWN BUGS or LIMITATIONS:
+
+
+
+----------------------------------------------
+ANY OTHER NOTES FOR THE GRADER:
+
+
+
+----------------------------------------------
+ANSWERS TO ASSIGNMENT README QUESTIONS (if applicable):
+    1.  The outside code resources students will be
+allowed to use in assignments for this class are limited to code written by the course staff
+for the purposes of helping students in the course, or code from the textbook for this
+course. If you do use any such code not written by you, you are required to acknowledge
+your sources in your README file. 
+
+    2. two heads: 25%, 
+       one head and one tail: 50%, 
+       two tails: 25%
+       The probability of one head and one tail is different from the other two. 
+       Why: 0.5*0.5+0.5*0.5 = 0.5
+       Possible results of every toss of two coins: head+head, head+tail, tail+head, tail+tail.
+       You will have 50% the first coin is head and 50% the second coin is tail, plus 50% the first coin is tail and 50% the second coin is head. And those two add up to 0.5 which is 50%.
+    3. For me, roughly 10000 times.
+    4. The max trials num that doesnt produces crash: 2147483647. 
+       The largest value I tried where it still worked correctly: 1000000000. 
+       The one where it overflowed: 2147483648.
