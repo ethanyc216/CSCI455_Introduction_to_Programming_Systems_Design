@@ -1,0 +1,59 @@
+Name: Yifan Chen
+USC NetID: ychen865
+CSCI 455 Fall 2019
+Lab 1
+
+Note: On-campus students can put their answers to the lab questions in this file, or use a piece of paper they can show to their lab TA.  DEN students will need to put their answers in this README, so they will get submitted.
+
+1.1
+/home/ccc_1fc9eb9135_6874/asn83330_2/asn83331_1/work
+
+1.2
+Hello.java  README  
+
+1.3
+/home/ccc_1fc9eb9135_6874/asn83330_2/asn83331_1/work/ex1
+
+1.4
+cd 
+cd ..
+cd ~
+
+1.5
+ls ..
+
+1.6
+cd && cp Hello.java ex1/
+
+1.7
+mkdir lab1
+
+1.8
+copy ex1/Hello.java to the current directory
+
+1.9
+cd lab1/ex1/
+
+1.10
+home
+
+1.11
+mkdir ../foo
+
+1.12
+cd ../foo
+
+1.13
+ls ../ex1
+
+3.1
+Hello.java:7: error: ';' expected                                                                                                                        
+      System.out.println("Hello world!")                                                                                                                 
+                                        ^                                                                                                                
+1 error  
+
+3.2
+10
+
+3.3
+
