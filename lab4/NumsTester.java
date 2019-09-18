@@ -1,3 +1,4 @@
+import java.util.*;
 
 /**
    This class tests the Nums class.
@@ -61,6 +62,14 @@ public class NumsTester
       Does not error-check input.
    */
    public static void readNums(Nums nums) {
+
+      Scanner in = new Scanner(System.in);
+      System.out.print("please enter the input: ");
+
+      while (in.hasNextInt()) {
+         int inputNum = in.nextInt();
+         nums.add(inputNum);
+        }
 
    }
 }

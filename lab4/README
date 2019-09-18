@@ -8,6 +8,66 @@ Note: On-campus students can put their answers to the lab questions in this file
 1.1
 Implement and test early help us find any potential bugs early and make it easier for us debug.
 
-1.2
+2.1
+nums.in:
+-17
+test1.in
+2
+test2.in
+2147483647
 
+2.2
+2147483647
+2147483647 2147483647
 
+3.1
+nums.in
+10: (17 17 21 18)
+-20: (3 -7 10 17 9 -17 17 21 18 7)
+-17: (3 -7 10 17 9 17 21 18 7)
+21: ()
+
+test1.in
+10: ()
+-20: (2)
+-17: (2)
+21: ()
+
+test2.in
+10: ()
+-20: ()
+-17: ()
+21: ()
+
+test3.in
+10: (21)
+-20: (10 -17 21)
+-17: (10 21)
+21: ()
+
+4.1
+11d, dd
+
+4.2
+(nums.valuesGT(threshold)).printVals();
+
+4.3
+Nums
+
+4.4
+Nums outputNums = nums.valuesGT(threshold);
+outputNums.printVals();
+
+4.5
+The time complicity of ArrayList is higher than Array when you try to get some element
+
+4.6
+The time complicity of ArrayList is lower than Array when you try to add new elements in the array without knowing how many numbers you will add.
+
+4.7
+1. No. Read & print
+2. No. Store the minimum value found so far & print the result 
+3. No. Combine 1&2
+4. No. Store the threshold value, print numbers when bigger than the threshold
+5. Yes, you have to. Because you dont know if the number you will need in the future 
+6. You have to. Because you have to print out the input numbers when necessary 

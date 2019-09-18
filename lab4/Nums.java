@@ -1,3 +1,4 @@
+import java.util.*;
 
 /**
    Stores a sequence of integer data values and supports some computations
@@ -7,19 +8,30 @@
 */
 public class Nums {
 
+   ArrayList<Integer> nums;
+
 
    /**
       Create an empty sequence of nums.
    */
    public Nums () {
-
+      nums = new ArrayList<Integer>();
    }
+
+
+   /**
+      Create a sequence of nums using input ArrayList.
+   */
+   public Nums(ArrayList<Integer> array) {
+      nums = array;
+   }
+
 
    /**
       Add a value to the end of the sequence.
    */
    public void add(int value) {
-
+      nums.add(value);
    }
 
 
@@ -28,9 +40,13 @@ public class Nums {
       If the sequence is empty, returns Integer.MAX_VALUE
    */
    public int minVal() {
-
-      return 0;    // stub code to get it to compile
-
+      int minVal = Integer.MAX_VALUE;
+      for (int a:nums) {
+         if (a < minVal) {
+             minVal = a;
+         }
+      }
+      return minVal;
    }
 
    /**
@@ -40,7 +56,18 @@ public class Nums {
       E.g., "(3 7 4 10 2 7)", for empty sequence: "()"
    */
    public void printVals() {
+      if (nums.isEmpty()) {
+         System.out.print("()");
 
+      } else {
+         String printVal = "(";
+         for (int a:nums) {
+            printVal += (a + " ");
+         }
+         printVal = printVal.substring(0, printVal.length()-1) + ")";
+
+         System.out.print(printVal);
+      }
    }
 
    /**
@@ -53,10 +80,13 @@ public class Nums {
       The method does not modify the object the method is called on.
    */
    public Nums valuesGT(int threshold) {
-
-      return new Nums();  // stub code to get it to compile
-
+      ArrayList<Integer> greaterVals = new ArrayList<>();
+      for (int a:nums) {
+         if (a > threshold) {
+            greaterVals.add(a);
+         }
+      }
+      return new Nums(greaterVals);
    }
-
     
 }
