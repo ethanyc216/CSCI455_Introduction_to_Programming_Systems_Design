@@ -1,0 +1,22 @@
+Name: Yifan Chen
+USC NetID: ychen865
+CSCI 455 Fall 2019
+Lab 3
+
+Note: On-campus students can put their answers to the lab questions in this file, or in a text file created in another text editor, or use a piece of paper they can show to their lab TA.  DEN students will need to put their answers in this README, so they will get submitted.
+
+1.1
+(-0.75-1.50)+(2*1+0.1*5) = 0.25
+
+1.2
+The problem arises because computers represent numbers in the binary number system. In the binary number system, there is no exact representation of the fraction 1/10.
+
+2.1
+0.65, yes
+
+3.1
+cd 
+cp -r ex2 ex3
+
+4.1
+The Total part and the change part
