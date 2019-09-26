@@ -59,10 +59,11 @@ ArrayList<Integer> piles = new ArrayList<>();
 or 
 int[] piles = new int[45];
 int size = 0;
+int capacity = 45;
 
 2.3
 Write in down.
 
 
 3.1
-totalCardNum;
+int totalCardNum;
