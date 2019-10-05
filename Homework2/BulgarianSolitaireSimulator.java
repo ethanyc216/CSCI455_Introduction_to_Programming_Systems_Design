@@ -37,8 +37,9 @@ public class BulgarianSolitaireSimulator {
             }
         }
 
-        SolitaireBoard solitaireBoard = createSolitaireBoard(userConfig);
-        playSolitaireBoard(solitaireBoard, singleStep);
+        Scanner in = new Scanner(System.in);
+        SolitaireBoard solitaireBoard = createSolitaireBoard(userConfig, in);
+        playSolitaireBoard(solitaireBoard, singleStep, in);
       
     }
 
@@ -50,23 +51,84 @@ public class BulgarianSolitaireSimulator {
      *     true:  create your own inputs
      *     false: use random inputs.
      *
+     * @param in: the Scanner object to read from users' inputs (System.in).
+     *
+     * @return a SolitaireBoard object that is gonna be play.
+     *
     **/
-    private static SolitaireBoard createSolitaireBoard(Boolean userConfig) {
+    private static SolitaireBoard createSolitaireBoard(Boolean userConfig, Scanner in) {
 
         if (userConfig) {
             gameInstructions();
-            Scanner in = new Scanner(System.in);
-            int[] piles;
+            List<Integer> piles = new ArrayList<Integer>();
+            int numCard;
+            int sum;
+
             while (true) {
                 System.out.println("Please enter a space-separated list of positive integers followed by newline:");
-                int[] tmpPiles = int[45];
-                
-                while (in.hasNext()) {
-                    
+
+                //String line = in.nextLine();
+                Scanner lineScanner = new Scanner(in.nextLine());
+
+                while (lineScanner.hasNext()) {
+                    if (lineScanner.hasNextInt()) {
+                        numCard = lineScanner.nextInt();
+                        // inputs contain non-positive value
+                        if (numCard <= 0) {
+                            piles.clear();
+                            break;
+                        }
+                        piles.add(numCard);
+                    } else {
+                        // inputs contain non-integer
+                        piles.clear();
+                        break;
+                    }
                 }
 
+                sum = 0;
+                for (int i = 0; i < piles.size(); i ++) {
+                    sum += piles.get(i);
+                }
+
+                // inputs sum up not equal to SolitaireBoard.CARD_TOTAL
+                if (sum == SolitaireBoard.CARD_TOTAL) {
+                    break;
+                }
+                piles.clear();
+                System.out.println("ERROR: Each pile must have at least one card and the total number of cards must be 45");
+            }
+
+            return new SolitaireBoard((ArrayList<Integer> )piles);
+        } else {
+            return new SolitaireBoard();
+        }
+
+    }
+
+
+    /**
+     * Play the Bulgarian Solitaire game, and print the result according to the 
+     * 
+     * @param solitaireBoard: the solitaire board that is gonna be played by the program.
+     * @param in: the Scanner object to read from users' inputs (System.in).
+     *
+    **/
+    private static void playSolitaireBoard(SolitaireBoard solitaireBoard, Boolean singleStep, Scanner in) {
+
+        int index = 0;
+        System.out.println("Initial configuration: " + solitaireBoard.configString());
+        while (!solitaireBoard.isDone()) {
+            solitaireBoard.playRound();
+            index ++;
+            System.out.println("[" + index + "] Current configuration: " + solitaireBoard.configString());
+            if (singleStep) {
+                System.out.print("<Type return to continue>");
+                in.nextLine();
             }
         }
+
+        System.out.println("Done!");
 
     }
 
@@ -83,5 +145,4 @@ public class BulgarianSolitaireSimulator {
 
     }
 
-  
 }
