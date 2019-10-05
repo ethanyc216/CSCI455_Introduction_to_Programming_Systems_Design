@@ -1,0 +1,32 @@
+Total score	*/46
+Grader: ***
+Correctness - Bar class works well	*/2
+Correctness - Bars are different colors	*/0.5
+Correctness - Bars are spaced evenly	*/1
+Correctness - Bars drawn with heights appropriate to results	*/3
+Correctness - Checks # of trials is positive using a loop	*/2
+Correctness - CTS class works well	*/3
+Correctness - Each bar is labeled */ correct rounded percent of trials	*/1
+Correctness - Each bar is labeled */ outcome it represents	*/1
+Correctness - gets different results on every run for a particular number of trials	*/3
+Correctness - Labels are centered under each bar	0.*/0.5
+Correctness - Prompts for # of trials and does that many trials	*/2
+Correctness - Redraws the window correctly on resize	*/3
+Correctness - Works for one trial	*/2
+Correctness - Works for small numbers of trials	*/2
+Correctness - Works for very large number of trials	*/1
+README - Question 1	*/0.5
+README - Question 2	*/0.5
+README - Question 3	*/0.5
+README - Question 4	*/0.5
+Style	*/9
+Testing - Has a CTST which prints results correctly	*/2
+Testing CTST - checks outcomes add up to total number of trials after each run	*/1
+Testing CTST - correctly “fails” when run with a buggy CTS	*/1
+Testing CTST - has more than one calls to “run” after a reset	*/1
+Testing CTST - has several calls to “run” in sequence, print out results of each	*/1
+Testing CTST - tests constructor by printing out results of accessors	*/1
+Testing CTST - tests reset by printing out results of accessors	*/1
+Late penalty	-
+Comment
+Style: magic numbers Testing CTST: doesn't have more than one calls to “run” 

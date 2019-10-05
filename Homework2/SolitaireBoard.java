@@ -1,5 +1,5 @@
-// Name:
-// USC NetID:
+// Name: Yifan Chen
+// USC NetID: ychen865
 // CSCI455 PA2
 // Fall 2019
 
