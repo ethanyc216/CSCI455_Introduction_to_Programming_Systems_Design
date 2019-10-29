@@ -36,10 +36,12 @@ public class MineField {
 
       numRows = mineData.length;
       numCols = mineData[0].length;
-      this. mineData = mineData; 
+      this. mineData = new boolean[numRows][numCols];
+      //this. mineData = mineData; 
 
       for (int j = 0; j < numRows; j ++) {
          for (int i = 0; i < numCols; i ++) { 
+            this. mineData[j][i] = mineData[j][i];
             if (mineData[j][i]) { 
                numMines ++;
             }   
