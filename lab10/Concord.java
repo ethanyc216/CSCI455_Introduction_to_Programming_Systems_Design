@@ -84,6 +84,24 @@ public class Concord {
     */
    public void printSorted(PrintStream out) {
 
+      Comparator<Map.Entry<String, Integer>> comparator = new Comparator<Map.Entry<String, Integer>>() {
+         @Override
+         public int compare(Map.Entry<String, Integer> obj1, Map.Entry<String, Integer> obj2) {
+             int res = obj2.getValue() - obj1.getValue();
+             return res;
+         }
+      };
+
+     ArrayList<Map.Entry<String, Integer>> list = new ArrayList<>();
+     for (Map.Entry<String, Integer> curr : concord.entrySet()) {
+         list.add(curr);
+     }
+     
+     Collections.sort(list, comparator);
+     for (Map.Entry<String, Integer> curr : list) {
+         out.println(curr.getKey() + " " + curr.getValue());
+     }
+
    }
 	
    // NOTE: printSatisfying only used in Ex. 3

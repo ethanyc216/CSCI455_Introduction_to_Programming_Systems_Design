@@ -19,9 +19,9 @@ public class ConcordDriver {
 		
       concord.addData(in);		
 		
-      concord.print(System.out);
+      //concord.print(System.out);
 
-      //     	concord.printSorted(System.out);
+      concord.printSorted(System.out);
 		
    }
 

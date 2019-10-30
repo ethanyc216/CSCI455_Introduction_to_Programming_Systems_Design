@@ -1,0 +1,43 @@
+1.1
+they print out in alpha order
+
+
+2.1
+Rank	Word
+1	the
+2	be
+3	to
+4	of
+5	and
+
+
+2.2
+poe:
+i 109 its a story
+a 62 lots of objects
+
+melville:
+i 519 its a story
+
+
+2.3
+alpha order
+Sorts the specified list according to the order induced by the specified comparator.
+This sort is guaranteed to be stable: equal elements will not be reordered as a result of the sort.
+https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#sort-java.util.List-java.util.Comparator-
+Yes
+
+
+3.1
+?? because we dont need to use it afterwards
+
+
+3.2
+poe:
+15
+connoisseurship 1
+
+melville:
+16 
+obstreperousness 1
+unreasonableness 1

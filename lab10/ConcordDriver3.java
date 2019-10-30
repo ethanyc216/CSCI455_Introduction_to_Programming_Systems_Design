@@ -31,6 +31,7 @@ public class ConcordDriver3 {
 		
 
       // add code here to print out the selected entries
+      concord.printSatisfying(System.out, new LargeWordPred(threshold));
 		
    }
 
@@ -38,3 +39,21 @@ public class ConcordDriver3 {
 
 
 // add new class here
+class LargeWordPred implements Predicate{
+
+   private int threshold;
+   
+   public LargeWordPred(int threshold){
+      this. threshold = threshold;
+   }
+
+   public boolean predicate(Map.Entry<String,Integer> item) {
+
+      if (item.getKey().length() >= threshold) {
+         return true;
+      }
+      return false;
+
+   }
+
+}
