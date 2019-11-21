@@ -84,6 +84,7 @@ public class WordFinder {
     /**
         Print out the results.
         @param results the results that will be print out. It uses score as a key and use ArrayList of the result string as value.
+        The result will be print in order of the score.
     **/
     private static void printResults(String letters, Map<Integer, ArrayList<String>> results, int resultNum) {
 

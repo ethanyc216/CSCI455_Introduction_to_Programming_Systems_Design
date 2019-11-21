@@ -29,6 +29,7 @@ public class ScoreTable {
         Gets the score of one word.
         @param word whose score we need to get
         @return the score of the word
+        Score equals to the sum of the point of each letter in the word
     **/
     public int getScore(String word) {
         

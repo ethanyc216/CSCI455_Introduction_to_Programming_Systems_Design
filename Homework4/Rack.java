@@ -16,6 +16,7 @@ public class Rack {
         Wrapper for allSubsets. Get all subsets of the given string. 
         @param word the input string, which we want its all subsets
         @return the list of all subsets of the given string
+        All the subset should belongs to the given word 
     **/
     public static ArrayList<String> getAllSubsets(String word){
 
