@@ -16,19 +16,17 @@
 
 #ifndef LIST_FUNCS_H
 #define LIST_FUNCS_H
-
-using namespace std;
   
 
 struct Node {
-    string key;
+    std::string key;
     int value;
 
     Node* next;
 
-    Node(const string& theKey, int theValue);
+    Node(const std::string& theKey, int theValue);
 
-    Node(const string& theKey, int theValue, Node* n);
+    Node(const std::string& theKey, int theValue, Node* n);
 };
 
 
@@ -43,25 +41,25 @@ typedef Node* ListType;
     Checks if the list contains the key. 
     If the list contains key, return true; otherwise, return false.
 */
-bool contains(ListType& list, string key);
+bool contains(ListType& list, std::string key);
 
 /*
     Create a new Node with given key and value and add to the front of the list.
     If key exists, return false; otherwise, add the node and return true.
 */
-bool add(ListType& list, string key, int value);
+bool add(ListType& list, std::string key, int value);
 
 /*
     Removes the node that contains the given key from the list. 
     If key exists, remove the node and return true; otherwise, return false.
 */
-bool remove(ListType& list, string key);
+bool remove(ListType& list, std::string key);
 
 /*
     Updates the value of the key. 
     If key exists in the list, update the value and return true; otherwise, return false.
 */
-bool update(ListType& list, string key, int value);
+bool update(ListType& list, std::string key, int value);
 
 /*
     Print out all the nodes in the list, one per line.
